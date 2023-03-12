@@ -1,0 +1,15 @@
+Avaliação Prática
+Utilizando a ferramenta Selenium com Python:
+
+Escolher um site para entrar, fazer busca e capturar texto
+
+Entrar no site
+Executar 4 ações (Navegação em menus, busca, ordenação)
+Capturar conteúdo e salvar em arquivo csv.
+Entrega:  15/03/2023
+
+Trabalho Individual
+
+Peso: 10% da média.
+
+Última atualização: quarta, 8 Mar 2023, 20:27
