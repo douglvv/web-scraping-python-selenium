@@ -86,6 +86,8 @@ try:
     except:
         print("Erro ao clicar em mostrar mais")
 
+    time.sleep(2)
+    
     driver.save_screenshot('tela02.png')
 
     time.sleep(2)
@@ -99,6 +101,10 @@ try:
     tabela = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'/html/body/main/div[3]/div/section[1]/ul/li[1]/section/div[2]/div[2]/div')))
     conteudo_html = tabela.get_attribute('outerHTML') #salva apenas o outerHTML da tabela
     lista = BeautifulSoup(conteudo_html,'html.parser') #converte lista para HTML
+
+    with open('tabela_artilheiros.html','w') as arquivo: #cria um arquivo com o outerHTML da pagina
+        arquivo.write(str(conteudo_html))#escreve o arquivo como string
+    arquivo.close()
 
     #Cria o arquivo csv com a lista de artilheiros
     with open('lista_artilheiros.csv','w') as arquivo:
